@@ -131,7 +131,7 @@ while True:
                     case 3:
                         try:
                             n = int(input("Сколько последних строк показать? "))
-                            task6_read_n(n)
+                            task6_read(n)
                         except ValueError:
                             print("Нужно ввести число!")
                     case _:
