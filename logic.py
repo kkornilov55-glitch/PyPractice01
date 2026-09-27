@@ -42,15 +42,15 @@ def task5(lst):
 #содержимого файла. Доработайте скрипт и добавьте функцию для чтения
 #последних n строк файла.
 path = "test.txt"
-def task6_read():
-    with open(path, "r", encoding='utf-8') as f:
-        text = f.read()
-    print(text)
-
-def task6_read_n(n):
+def task6_read(n = -1):
     with open(path, "r", encoding='utf-8') as f:
         lines = f.readlines()
-    text = lines[-n:]
+
+    if n == -1:
+        text = ''.join(lines)
+    else:
+        text = lines[-n:]
+
     print(''.join(text))
 
 def task6_write(text):
@@ -106,7 +106,7 @@ task5([5,2,3,2,6,7,5])
 task6_write("ТЕСТ")
 task6_read()
 print("--- Последние 3 строки ---")
-task6_read_n(3)
+task6_read(3)
 
 #7,8
 d = {
