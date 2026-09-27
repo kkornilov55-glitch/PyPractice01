@@ -41,7 +41,7 @@ def task5(lst):
 #40. Напишите скрипт для добавления текста в файл и отображения
 #содержимого файла. Доработайте скрипт и добавьте функцию для чтения
 #последних n строк файла.
-path = "test.txt"
+path = "testFiles/test.txt"
 def task6_read(n = -1):
     with open(path, "r", encoding='utf-8') as f:
         lines = f.readlines()
@@ -59,11 +59,11 @@ def task6_write(text):
 
 # 44. Запишите словарь в файл посредством модуля pickle и прочитайте его.
 def task7_write(d):
-    with open("pickleTest.txt", "wb") as f:
+    with open("testFiles/pickleTest.txt", "wb") as f:
         pickle.dump(d, f)
 
 def task7_read():
-    with open("pickleTest.txt", "rb") as f:
+    with open("testFiles/pickleTest.txt", "rb") as f:
         d = pickle.load(f)
     return d
 
@@ -72,11 +72,11 @@ def task7_read():
 # 46. Запишите словарь в файл посредством модуля json и прочитайте его.
 
 def task8_write(d):
-    with open("jsonTest.txt", "w") as f:
+    with open("testFiles/jsonTest.txt", "w") as f:
         json.dump(d, f)
 
 def task8_read():
-    with open("jsonTest.txt", "r") as f:
+    with open("testFiles/jsonTest.txt", "r") as f:
         d = json.load(f)
 
     for k, v in d.items():
